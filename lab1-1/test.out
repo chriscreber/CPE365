@@ -1,0 +1,90 @@
+Hi welcome to the school search program!
+Select one:
+S[tudent]: <lastname> [B[us]]
+T[eacher]: <lastname>
+B[us]: <number>
+G[rade]: <number>
+A[verage]: <number>
+I[nfo]
+Q[uit]
+
+Student 1
+    Name: tory early
+    Bus Route: 52
+
+Enter New Selection: 
+Student 1
+    Name: xuan cookus
+Student 2
+    Name: shante elhaddad
+Student 3
+    Name: sharri swedlund
+Student 4
+    Name: manie ciganek
+Student 5
+    Name: tomas covington
+Student 6
+    Name: tory early
+Student 7
+    Name: lela linhart
+
+Enter New Selection:
+Instance 1:
+Last Name: saelee
+First Name: danilo
+Instance 2:
+Last Name: garth
+First Name: john
+
+Enter New Selection:
+Student 1
+    Last Name: racanello
+    First Name: noel
+    Grade: 6
+    Classroom 102
+Student 2
+    Last Name: vilardo
+    First Name: emmanuel
+    Grade: 2
+    Classroom 104
+Student 3
+    Last Name: krake
+    First Name: valentin
+    Grade: 6
+    Classroom 109
+Student 4
+    Last Name: bean
+    First Name: inger
+    Grade: 6
+    Classroom 111
+Student 5
+    Last Name: bussmann
+    First Name: billy
+    Grade: 2
+    Classroom 108
+Student 6
+    Last Name: feyereisen
+    First Name: wilfredo
+    Grade: 6
+    Classroom 111
+
+Enter New Selection:
+Average GPA in Grade 2: 2.946153846153846
+
+Enter New Selection:
+Gr     Count
+1   :  2
+2   :  13
+3   :  9
+4   :  15
+5   :  0
+6   :  21
+
+Enter New Selection:
+Student 1
+    Name: john garth      Grade: 1
+    Classroom: 103      Teacher's Name: adolph falker
+
+Enter New Selection:
+
+Enter New Selection:

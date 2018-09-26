@@ -1,0 +1,130 @@
+// CSC 365. Fall 2018
+// Chris Creber & Jett Moy
+// Lab 1-1 test suite
+
+// TC-1
+// Tests Requirments R5
+// find student and bus route
+// expected output:
+// Student 1
+//    Name: tory early
+//    Bus Route: 52
+
+
+S: EARLY B
+
+// TC-2
+// Tests Requirments R6
+// search all of a teacher's students
+// expected output:
+// Student 1
+//    Name: xuan cookus
+// Student 2
+//    Name: shante elhaddad
+// Student 3
+//    Name: sharri swedlund
+// Student 4
+//    Name: manie ciganek
+// Student 5
+//    Name: tomas covington
+// Student 6
+//    Name: tory early
+// Student 7
+//    Name: lela linhart
+
+T: FAFARD
+
+// TC-3
+// Tests Requirments R7
+// find all names of all the students in a grade
+// expected output:
+// Instance 1:
+// Last Name: saelee
+// First Name: danilo
+// Instance 2:
+// Last Name: garth
+// First Name: john
+
+G: 1
+
+// TC-4
+// Tests Requirments R8
+// find student info by bus route
+// expected output:
+// Student 1
+//    Last Name: racanello
+//    First Name: noel
+//    Grade: 6
+//    Classroom 102
+// Student 2
+//    Last Name: vilardo
+//    First Name: emmanuel
+//    Grade: 2
+//    Classroom 104
+// Student 3
+//    Last Name: krake
+//    First Name: valentin
+//    Grade: 6
+//    Classroom 109
+// Student 4
+//    Last Name: bean
+//    First Name: inger
+//    Grade: 6
+//    Classroom 111
+// Student 5
+//    Last Name: bussmann
+//    First Name: billy
+//    Grade: 2
+//    Classroom 108
+// Student 6
+//    Last Name: feyereisen
+//    First Name: wilfredo
+//    Grade: 6
+//    Classroom 111
+
+B: 56
+
+// TC-5
+// Tests Requirments R10
+// find average GPA for a grade
+// expected output: Average GPA in Grade 2: 2.946153846153846
+
+A: 2
+
+// TC-6
+// Tests Requirments R11
+// class sizes by grade
+// expected output:
+// Gr     Count
+// 1   :  2
+// 2   :  13
+// 3   :  9
+// 4   :  15
+// 5   :  0
+// 6   :  21
+
+I
+
+// TC-5
+// Tests Requirements R3, R4
+// search name, existing student
+// expected output:
+// Student 1
+//     Name: john garth      Grade: 1
+//     Classroom: 103      Teacher's Name: adolph falker
+
+
+S: GARTH
+
+// TC-6
+// Tests Requirements R3, R4
+// search non-existing student
+// expected output: <empty line>
+
+S: BOAT
+
+//TC-7
+// Tests Requirments R3, R13
+// quit command
+// expected output: program terminates
+Q

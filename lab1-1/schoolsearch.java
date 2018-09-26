@@ -19,28 +19,39 @@ class Student {
    }
 
    public static void studentSearch(ArrayList<Student> studentList, String stLastName) {
-      int inst = 1;
+      int count = 1;
       for(Student student: studentList) {
          if(student.stLastName.equals(stLastName)){
-            System.out.println("Instance " + inst++ + ":");
-            System.out.println("Last Name: " + student.stLastName);
-            System.out.println("First Name: " + student.stFirstName);
-            System.out.println("Grade: " + student.grade);
-            System.out.println("Classroom: " + student.classroom);
-            System.out.println("Teacher's Last Name: " + student.tLastName);
-            System.out.println("Teacher's First Name: " + student.tFirstName);
+            System.out.println("Student " + count++);
+            System.out.print("    Name: " + student.stFirstName + " " +
+               student.stLastName);
+            System.out.println("      Grade: " + student.grade);
+            System.out.print("    Classroom: " + student.classroom);
+            System.out.println("      Teacher's Name: " + student.tFirstName +
+               " " + student.tLastName);
          }
       }
    }
 
    public static void studentSearchBus(ArrayList<Student> studentList, String stLastName) {
-      int inst = 1;
+      int count = 1;
       for(Student student: studentList) {
          if(student.stLastName.equals(stLastName)){
-            System.out.println("Instance " + inst++ + ":");
-            System.out.println("Last Name: " + student.stLastName);
-            System.out.println("First Name: " + student.stFirstName);
-            System.out.println("Bus Route: " + student.bus);
+            System.out.println("Student " + count++);
+            System.out.println("    Name: " + student.stFirstName + " " +
+               student.stLastName);
+            System.out.println("    Bus Route: " + student.bus);
+         }
+      }
+   }
+
+   public static void teacherSearch(ArrayList<Student> studentList, String teacherName) {
+      int count = 1;
+      for (Student student: studentList) {
+         if (student.tLastName.equals(teacherName)) {
+            System.out.println("Student " + count++);
+            System.out.println("    Name: " + student.stFirstName + " " +
+               student.stLastName);
          }
       }
    }
@@ -52,6 +63,19 @@ class Student {
             System.out.println("Instance " + inst++ + ":");
             System.out.println("Last Name: " + student.stLastName);
             System.out.println("First Name: " + student.stFirstName);
+         }
+      }
+   }
+
+   public static void busSearch(ArrayList<Student> studentList, int busRoute) {
+      int count = 1;
+      for (Student student: studentList) {
+         if (student.bus == busRoute) {
+            System.out.println("Student " + count++);
+            System.out.println("    Last Name: " + student.stLastName);
+            System.out.println("    First Name: " + student.stFirstName);
+            System.out.println("    Grade: " + student.grade);
+            System.out.println("    Classroom " + student.classroom);
          }
       }
    }
@@ -99,6 +123,42 @@ class Student {
       }
       System.out.println("Average GPA in Grade " + grade + ": " + total/numStudents);
    }
+
+   public static void info(ArrayList<Student> studentList) {
+      int[] classSizes = getCLassSizes(studentList);
+      printInfo(classSizes);
+   }
+
+   public static int[] getCLassSizes(ArrayList<Student> studentList) {
+      int[] classSizes = new int[6];
+      for (Student student: studentList) {
+         switch (student.grade) {
+            case 1: classSizes[0]++;
+                  break;
+            case 2: classSizes[1]++;
+                  break;
+            case 3: classSizes[2]++;
+                  break;
+            case 4: classSizes[3]++;
+                  break;
+            case 5: classSizes[4]++;
+                  break;
+            case 6: classSizes[5]++;
+                  break;
+         }
+      }
+      return classSizes;
+   }
+
+   public static void printInfo(int[] classSizes) {
+      System.out.println("Gr     Count");
+      System.out.println("1   :  " + classSizes[0]);
+      System.out.println("2   :  " + classSizes[1]);
+      System.out.println("3   :  " + classSizes[2]);
+      System.out.println("4   :  " + classSizes[3]);
+      System.out.println("5   :  " + classSizes[4]);
+      System.out.println("6   :  " + classSizes[5]);
+   }
 }
 
 public class schoolsearch {
@@ -139,6 +199,7 @@ public static void main(String[] args){
    System.out.println("A[verage]: <number>");
    System.out.println("I[nfo]");
    System.out.println("Q[uit]");
+   System.out.println();
 
    scanner = new Scanner(System.in);
    String input = scanner.nextLine().toLowerCase();
@@ -185,11 +246,19 @@ public static void main(String[] args){
                         break;
                      }
                      break;
+         case "t:": Student.teacherSearch(studentList, strArr[1]);
+                  break;
+         case "b:": Student.busSearch(studentList, Integer.parseInt(strArr[1]));
+                  break;
+         case "i": Student.info(studentList);
+                  break;
          default: System.out.println("Invalid Option... Try again");
                   break;
       }
-      System.out.println("Enter New Selection: ");
+      System.out.println();
+      System.out.print("Enter New Selection: ");
       input = scanner.nextLine().toLowerCase();
+      System.out.println();
    }
 
 
