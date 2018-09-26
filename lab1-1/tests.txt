@@ -3,18 +3,17 @@
 // Lab 1-1 test suite
 
 // TC-1
-// Tests Requirments R5
+// Tests Requirments R3, R5
 // find student and bus route
 // expected output:
 // Student 1
 //    Name: tory early
 //    Bus Route: 52
 
-
 S: EARLY B
 
 // TC-2
-// Tests Requirments R6
+// Tests Requirments R3, R6
 // search all of a teacher's students
 // expected output:
 // Student 1
@@ -35,7 +34,7 @@ S: EARLY B
 T: FAFARD
 
 // TC-3
-// Tests Requirments R7
+// Tests Requirments R3, R7
 // find all names of all the students in a grade
 // expected output:
 // Instance 1:
@@ -48,7 +47,7 @@ T: FAFARD
 G: 1
 
 // TC-4
-// Tests Requirments R8
+// Tests Requirments R3, R8
 // find student info by bus route
 // expected output:
 // Student 1
@@ -85,17 +84,18 @@ G: 1
 B: 56
 
 // TC-5
-// Tests Requirments R10
+// Tests Requirments R3, R10
 // find average GPA for a grade
 // expected output: Average GPA in Grade 2: 2.946153846153846
 
 A: 2
 
 // TC-6
-// Tests Requirments R11
+// Tests Requirments R3, R11
 // class sizes by grade
 // expected output:
 // Gr     Count
+// 0   :  0
 // 1   :  2
 // 2   :  13
 // 3   :  9
@@ -105,7 +105,7 @@ A: 2
 
 I
 
-// TC-5
+// TC-6
 // Tests Requirements R3, R4
 // search name, existing student
 // expected output:
@@ -116,14 +116,64 @@ I
 
 S: GARTH
 
-// TC-6
+// TC-7
 // Tests Requirements R3, R4
 // search non-existing student
 // expected output: <empty line>
 
 S: BOAT
 
-//TC-7
+// TC-8
+// Tests Requirments R3, R9
+// find student with highest GPA in 2nd grade
+// expected output:
+// Student with Highest GPA:
+// Last Name: wicinsky
+// First Name: terese
+// GPA: 3.22
+// Teacher's Last Name: hamer
+// Teacher's First Name: gavin
+// Bus Route: 53
+
+
+G: 2 H
+
+// TC-9
+// Tests Requirments R3, R9
+// find student with lowest GPA in 3rd grade
+// expected output:
+// Student with Lowest GPA:
+// Last Name: ciganek
+// First Name: manie
+// GPA: 2.79
+// Teacher's Last Name: fafard
+// Teacher's First Name: rocio
+// Bus Route: 53
+
+G: 3 L
+
+// TC-10
+// Tests Requirments R3, R10
+// Test incorrect grade option for average
+// expected output: Entered Not a Number for Grade... Try again
+
+A: B
+
+// TC-11
+// Tests Requirments R3, R10
+// Test average GPA for grade with no students
+// expected output: Average GPA in Grade 5: NaN
+
+A: 5
+
+// TC-12
+// Tests Requirments R3, R6
+// Search for non-existent teacher
+// expected output: <empty line>
+
+T: HANES
+
+// TC-13
 // Tests Requirments R3, R13
 // quit command
 // expected output: program terminates

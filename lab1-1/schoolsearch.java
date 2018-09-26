@@ -130,20 +130,22 @@ class Student {
    }
 
    public static int[] getCLassSizes(ArrayList<Student> studentList) {
-      int[] classSizes = new int[6];
+      int[] classSizes = new int[7];
       for (Student student: studentList) {
          switch (student.grade) {
-            case 1: classSizes[0]++;
+            case 0: classSizes[0]++;
                   break;
-            case 2: classSizes[1]++;
+            case 1: classSizes[1]++;
                   break;
-            case 3: classSizes[2]++;
+            case 2: classSizes[2]++;
                   break;
-            case 4: classSizes[3]++;
+            case 3: classSizes[3]++;
                   break;
-            case 5: classSizes[4]++;
+            case 4: classSizes[4]++;
                   break;
-            case 6: classSizes[5]++;
+            case 5: classSizes[5]++;
+                  break;
+            case 6: classSizes[6]++;
                   break;
          }
       }
@@ -152,12 +154,13 @@ class Student {
 
    public static void printInfo(int[] classSizes) {
       System.out.println("Gr     Count");
-      System.out.println("1   :  " + classSizes[0]);
-      System.out.println("2   :  " + classSizes[1]);
-      System.out.println("3   :  " + classSizes[2]);
-      System.out.println("4   :  " + classSizes[3]);
-      System.out.println("5   :  " + classSizes[4]);
-      System.out.println("6   :  " + classSizes[5]);
+      System.out.println("0   :  " + classSizes[0]);
+      System.out.println("1   :  " + classSizes[1]);
+      System.out.println("2   :  " + classSizes[2]);
+      System.out.println("3   :  " + classSizes[3]);
+      System.out.println("4   :  " + classSizes[4]);
+      System.out.println("5   :  " + classSizes[5]);
+      System.out.println("6   :  " + classSizes[6]);
    }
 }
 
@@ -246,9 +249,19 @@ public static void main(String[] args){
                         break;
                      }
                      break;
-         case "t:": Student.teacherSearch(studentList, strArr[1]);
+         case "t:": try {
+                        Student.teacherSearch(studentList, strArr[1]);
+                     } catch (Exception e) {
+                        System.out.println("Entered Not a Name for Teacher... Try again");
+                        break;
+                     }
                   break;
-         case "b:": Student.busSearch(studentList, Integer.parseInt(strArr[1]));
+         case "b:": try {
+                        Student.busSearch(studentList, Integer.parseInt(strArr[1]));
+                     } catch (Exception e) {
+                        System.out.println("Entered Not a Number for Bus Route... Try again");
+                        break;
+                     }
                   break;
          case "i": Student.info(studentList);
                   break;

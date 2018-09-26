@@ -12,7 +12,7 @@ Student 1
     Name: tory early
     Bus Route: 52
 
-Enter New Selection: 
+Enter New Selection:
 Student 1
     Name: xuan cookus
 Student 2
@@ -73,6 +73,7 @@ Average GPA in Grade 2: 2.946153846153846
 
 Enter New Selection:
 Gr     Count
+0   :  0
 1   :  2
 2   :  13
 3   :  9
@@ -84,6 +85,32 @@ Enter New Selection:
 Student 1
     Name: john garth      Grade: 1
     Classroom: 103      Teacher's Name: adolph falker
+
+Enter New Selection:
+
+Enter New Selection:
+Student with Highest GPA:
+Last Name: wicinsky
+First Name: terese
+GPA: 3.22
+Teacher's Last Name: hamer
+Teacher's First Name: gavin
+Bus Route: 53
+
+Enter New Selection:
+Student with Lowest GPA:
+Last Name: ciganek
+First Name: manie
+GPA: 2.79
+Teacher's Last Name: fafard
+Teacher's First Name: rocio
+Bus Route: 53
+
+Enter New Selection:
+Entered Not a Number for Grade... Try again
+
+Enter New Selection:
+Average GPA in Grade 5: NaN
 
 Enter New Selection:
 
