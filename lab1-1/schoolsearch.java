@@ -7,6 +7,15 @@ class Student {
    int grade, classroom, bus;
    double gpa;
 
+   public Student(String stLastName, String stFirstName, int grade, int classroom, int bus, double gpa){
+      this.stLastName = stLastName;
+      this.stFirstName = stFirstName;
+      this.grade = grade;
+      this.classroom = classroom;
+      this.bus = bus;
+      this.gpa = gpa;
+   }
+
    public Student(String stLastName, String stFirstName, int grade, int classroom, int bus, double gpa, String tLastName, String tFirstName){
       this.stLastName = stLastName;
       this.stFirstName = stFirstName;
@@ -164,34 +173,68 @@ class Student {
    }
 }
 
+class Teacher {
+   String tLastName, tFirstName;
+   int classroom;
+
+   public Teacher(String tLastName, String tFirstName, int classroom) {
+      this.tLastName = tLastName;
+      this.tFirstName = tFirstName;
+      this.classroom = classroom;
+   }
+
+}
+
 public class schoolsearch {
 
 public static void main(String[] args){
 
-   File file = new File("students.txt");
+   File fileStudents = new File("list.txt");
+   File fileTeachers = new File("teachers.txt");
    ArrayList<Student> studentList = new ArrayList<Student>();
-   Scanner scanner;
+   ArrayList<Teacher> teacherList = new ArrayList<Teacher>();
+   Scanner scannerStudents, scannerTeachers, scanner;
    try {
-      scanner = new Scanner(file);
+      scannerStudents = new Scanner(fileStudents);
+      scannerTeachers = new Scanner(fileTeachers);
    } catch (Exception e) {
       return;
    }
 
-   scanner.useDelimiter(",|\\n");
-   String stLastName, stFirstName, tLastName, tFirstName;
-   int grade, classroom, bus;
-   double gpa;
+   scannerStudents.useDelimiter(",\\s|,|\\n");
+   scannerTeachers.useDelimiter(",\\s|,|\\n");
 
 
-   while(scanner.hasNext()) {
+   while(scannerStudents.hasNext()) {
       try {
-         Student student = new Student(scanner.next().toLowerCase(), scanner.next().toLowerCase(), Integer.parseInt(scanner.next()), Integer.parseInt(scanner.next()), Integer.parseInt(scanner.next()), Double.parseDouble(scanner.next()), scanner.next().toLowerCase(), scanner.next().toLowerCase());
+         Student student = new Student(scannerStudents.next().toLowerCase(), scannerStudents.next().toLowerCase(), Integer.parseInt(scannerStudents.next()), Integer.parseInt(scannerStudents.next()), Integer.parseInt(scannerStudents.next()), Double.parseDouble(scannerStudents.next()));
          studentList.add(student);
       } catch (Exception e){
-         System.out.println("Bad Input... Exiting");
+         System.out.println("Bad Student Input... Exiting");
          return;
       }
    }
+
+   while(scannerTeachers.hasNext()) {
+      try {
+         Teacher teacher = new Teacher(scannerTeachers.next().toLowerCase(), scannerTeachers.next().toLowerCase(), Integer.parseInt(scannerTeachers.next()));
+         teacherList.add(teacher);
+      } catch (Exception e){
+         System.out.println("Bad Teacher Input... Exiting");
+         return;
+      }
+   }
+
+   for(Teacher teacher: teacherList){
+      for(Student student: studentList){
+         if(teacher.classroom == student.classroom){
+            student.tLastName = teacher.tLastName;
+            student.tFirstName = teacher.tFirstName;
+         }
+      }
+   }
+
+
 
    System.out.println("Hi welcome to the school search program!");
    System.out.println("Select one:");
