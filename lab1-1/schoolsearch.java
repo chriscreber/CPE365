@@ -171,6 +171,34 @@ class Student {
       System.out.println("5   :  " + classSizes[5]);
       System.out.println("6   :  " + classSizes[6]);
    }
+
+   //Analysis
+   public static void teacherSearchAnalysis(ArrayList<Student> studentList, String teacherName) {
+      int count = 1;
+      for (Student student: studentList) {
+         if (student.tLastName.equals(teacherName)) {
+            System.out.println("GPA " + count++ + ": " + student.gpa);
+         }
+      }
+   }
+
+   public static void gradeSearchAnalysis(ArrayList<Student> studentList, int grade) {
+      int count = 1;
+      for(Student student: studentList) {
+         if(student.grade == grade){
+            System.out.println("GPA " + count++ + ": " + student.gpa);
+         }
+      }
+   }
+
+   public static void busSearchAnalysis(ArrayList<Student> studentList, int busRoute) {
+      int count = 1;
+      for (Student student: studentList) {
+         if (student.bus == busRoute) {
+            System.out.println("GPA " + count++ + ": " + student.gpa);
+         }
+      }
+   }
 }
 
 class Teacher {
@@ -239,9 +267,9 @@ public static void main(String[] args){
    System.out.println("Hi welcome to the school search program!");
    System.out.println("Select one:");
    System.out.println("S[tudent]: <lastname> [B[us]]");
-   System.out.println("T[eacher]: <lastname>");
-   System.out.println("B[us]: <number>");
-   System.out.println("G[rade]: <number>");
+   System.out.println("T[eacher]: <lastname> [A[nalytics]]");
+   System.out.println("B[us]: <number>  [A[nalytics]]");
+   System.out.println("G[rade]: <number> [A[nalytics]]");
    System.out.println("A[verage]: <number>");
    System.out.println("I[nfo]");
    System.out.println("Q[uit]");
@@ -281,6 +309,13 @@ public static void main(String[] args){
                         System.out.println("Entered Not a Number for Grade... Try again");
                         break;
                      }
+                  } else if(strArr.length == 3 && strArr[2].equals("a")) {
+                     try {
+                        Student.gradeSearchAnalysis(studentList, Integer.parseInt(strArr[1]));
+                     } catch (Exception e) {
+                        System.out.println("Entered Not a Number for Grade... Try again");
+                        break;
+                     }
                   } else {
                      System.out.println("Invalid Option... Try again");
                   }
@@ -292,19 +327,37 @@ public static void main(String[] args){
                         break;
                      }
                      break;
-         case "t:": try {
+         case "t:": if(strArr.length == 2){
+                     try {
                         Student.teacherSearch(studentList, strArr[1]);
                      } catch (Exception e) {
                         System.out.println("Entered Not a Name for Teacher... Try again");
                         break;
                      }
+                  } else if(strArr.length == 3  && strArr[2].equals("a")){
+                     try {
+                        Student.teacherSearchAnalysis(studentList, strArr[1]);
+                     } catch (Exception e) {
+                        System.out.println("Entered Not a Name for Teacher... Try again");
+                        break;
+                     }
+                  }
                   break;
-         case "b:": try {
+         case "b:": if(strArr.length == 2){
+                     try {
                         Student.busSearch(studentList, Integer.parseInt(strArr[1]));
                      } catch (Exception e) {
                         System.out.println("Entered Not a Number for Bus Route... Try again");
                         break;
                      }
+                  } else if(strArr.length == 3 && strArr[2].equals("a")){
+                     try {
+                        Student.busSearchAnalysis(studentList, Integer.parseInt(strArr[1]));
+                     } catch (Exception e) {
+                        System.out.println("Entered Not a Number for Bus Route... Try again");
+                        break;
+                     }
+                  }
                   break;
          case "i": Student.info(studentList);
                   break;
