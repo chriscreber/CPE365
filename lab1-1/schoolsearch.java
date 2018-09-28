@@ -27,6 +27,7 @@ class Student {
       this.tFirstName = tFirstName;
    }
 
+   //Traceability: implements requirement(s) R4
    public static void studentSearch(ArrayList<Student> studentList, String stLastName) {
       int count = 1;
       for(Student student: studentList) {
@@ -42,6 +43,7 @@ class Student {
       }
    }
 
+   //Traceability: implements requirement(s) R5
    public static void studentSearchBus(ArrayList<Student> studentList, String stLastName) {
       int count = 1;
       for(Student student: studentList) {
@@ -54,6 +56,7 @@ class Student {
       }
    }
 
+   //Traceability: implements requirement(s) R6
    public static void teacherSearch(ArrayList<Student> studentList, String teacherName) {
       int count = 1;
       for (Student student: studentList) {
@@ -65,6 +68,7 @@ class Student {
       }
    }
 
+   //Traceability: implements requirement(s) R7
    public static void gradeSearch(ArrayList<Student> studentList, int grade) {
       int inst = 1;
       for(Student student: studentList) {
@@ -76,6 +80,7 @@ class Student {
       }
    }
 
+   //Traceability: implements requirement(s) R8
    public static void busSearch(ArrayList<Student> studentList, int busRoute) {
       int count = 1;
       for (Student student: studentList) {
@@ -89,6 +94,7 @@ class Student {
       }
    }
 
+   //Traceability: implements requirement(s) R9
    public static void gradeSearchHigh(ArrayList<Student> studentList, int grade) {
       Student bestStudent = new Student("dummy", "dummy", 0, 0, 0, -1.0, "dummy", "dummy");
       for(Student student: studentList) {
@@ -105,6 +111,7 @@ class Student {
       System.out.println("Bus Route: " + bestStudent.bus);
    }
 
+   //Traceability: implements requirement(s) R9
    public static void gradeSearchLow(ArrayList<Student> studentList, int grade) {
       Student worstStudent = new Student("dummy", "dummy", 0, 0, 0, 10.0, "dummy", "dummy");
       for(Student student: studentList) {
@@ -121,6 +128,7 @@ class Student {
       System.out.println("Bus Route: " + worstStudent.bus);
    }
 
+   //Traceability: implements requirement(s) R10
    public static void getAverageGPA(ArrayList<Student> studentList, int grade) {
       double total = 0;
       int numStudents = 0;
@@ -133,11 +141,13 @@ class Student {
       System.out.println("Average GPA in Grade " + grade + ": " + total/numStudents);
    }
 
+   //Traceability: implements requirement(s) R11
    public static void info(ArrayList<Student> studentList) {
       int[] classSizes = getCLassSizes(studentList);
       printInfo(classSizes);
    }
 
+   //Traceability: implements requirement(s) R11
    public static int[] getCLassSizes(ArrayList<Student> studentList) {
       int[] classSizes = new int[7];
       for (Student student: studentList) {
@@ -161,6 +171,7 @@ class Student {
       return classSizes;
    }
 
+   //Traceability: implements requirement(s) R11
    public static void printInfo(int[] classSizes) {
       System.out.println("Gr     Count");
       System.out.println("0   :  " + classSizes[0]);
@@ -263,7 +274,7 @@ public static void main(String[] args){
    }
 
 
-
+   //Traceability: implements requirement(s) R3
    System.out.println("Hi welcome to the school search program!");
    System.out.println("Select one:");
    System.out.println("S[tudent]: <lastname> [B[us]]");
@@ -275,6 +286,7 @@ public static void main(String[] args){
    System.out.println("Q[uit]");
    System.out.println();
 
+   //Traceability: implements requirement(s) R2, 11
    scanner = new Scanner(System.in);
    String input = scanner.nextLine().toLowerCase();
    while(!input.equals("q")) {
