@@ -3,7 +3,7 @@
 // Lab 1-1 test suite
 
 // TC-1
-// Tests Requirments R3, R5
+// Tests Requirements R3, R5
 // find student and bus route
 // expected output:
 // Student 1
@@ -13,7 +13,7 @@
 S: EARLY B
 
 // TC-2
-// Tests Requirments R3, R6
+// Tests Requirements R3, R6
 // search all of a teacher's students
 // expected output:
 // Student 1
@@ -34,7 +34,7 @@ S: EARLY B
 T: FAFARD
 
 // TC-3
-// Tests Requirments R3, R7
+// Tests Requirements R3, R7
 // find all names of all the students in a grade
 // expected output:
 // Instance 1:
@@ -47,7 +47,7 @@ T: FAFARD
 G: 1
 
 // TC-4
-// Tests Requirments R3, R8
+// Tests Requirements R3, R8
 // find student info by bus route
 // expected output:
 // Student 1
@@ -84,14 +84,14 @@ G: 1
 B: 56
 
 // TC-5
-// Tests Requirments R3, R10
+// Tests Requirements R3, R10
 // find average GPA for a grade
 // expected output: Average GPA in Grade 2: 2.946153846153846
 
 A: 2
 
 // TC-6
-// Tests Requirments R3, R11
+// Tests Requirements R3, R11
 // class sizes by grade
 // expected output:
 // Gr     Count
@@ -124,7 +124,7 @@ S: GARTH
 S: BOAT
 
 // TC-8
-// Tests Requirments R3, R9
+// Tests Requirements R3, R9
 // find student with highest GPA in 2nd grade
 // expected output:
 // Student with Highest GPA:
@@ -139,7 +139,7 @@ S: BOAT
 G: 2 H
 
 // TC-9
-// Tests Requirments R3, R9
+// Tests Requirements R3, R9
 // find student with lowest GPA in 3rd grade
 // expected output:
 // Student with Lowest GPA:
@@ -153,28 +153,138 @@ G: 2 H
 G: 3 L
 
 // TC-10
-// Tests Requirments R3, R10
+// Tests Requirements R3, R10
 // Test incorrect grade option for average
 // expected output: Entered Not a Number for Grade... Try again
 
 A: B
 
 // TC-11
-// Tests Requirments R3, R10
+// Tests Requirements R3, R10
 // Test average GPA for grade with no students
 // expected output: Average GPA in Grade 5: NaN
 
 A: 5
 
 // TC-12
-// Tests Requirments R3, R6
+// Tests Requirements R3, R6
 // Search for non-existent teacher
 // expected output: <empty line>
 
 T: HANES
 
 // TC-13
-// Tests Requirments R3, R13
+// Tests Requirements NR1
+// Search for single student in classroom 101
+// expected output:
+// Student 1
+//       Name: carlee durand
+
+C: 101 S
+
+// TC-14
+// Tests Requirements NR1
+// Search for non-existent classroom
+// expected output: <empty line>
+
+C: 99 S
+
+// TC-15
+// Tests Requirements NR2
+// Search for a single teacher in a classroom
+// expected output:
+// Teacher 1
+//       Name: reuben cool
+
+C: 101 T
+
+// TC-16
+// Tests Requirements NR2
+// Error checking for invalid input
+// expected output: Invalid Option... Try again
+
+C: 101
+
+// TC-17
+// Tests Requirements NR3
+// Search for a single teacher for first grade
+// expected output:
+// Teachers for grade 1:
+//     adolph falker
+
+G: 1 T
+
+// TC-18
+// Tests Requirements NR3
+// Search for multiple teachers in fourth grade
+// expected output:
+// Teachers for grade 4:
+//     jed hantz
+//     perla chionchio
+//     reuben cool
+
+G: 4 T
+
+// TC-19
+// Tests Requirements NR4
+// Checking the number of students in each classroom
+// expected output:
+// Classroom      Students
+// 101               1
+// 102               5
+// 103               2
+// 104               2
+// 105               6
+// 106               2
+// 107               7
+// 108               11
+// 109               5
+// 110               2
+// 111               9
+// 112               8
+
+E
+
+// TC-20
+// Tests Requirements NR5
+// provides gpa analytic data for teacher last name search
+// expected output:
+// GPA 1: 3.07
+// GPA 2: 2.86
+// GPA 3: 3.24
+// GPA 4: 2.79
+// GPA 5: 3.11
+// GPA 6: 2.91
+// GPA 7: 3.12
+
+T: FAFARD A
+
+// TC-21
+// Tests Requirements NR5
+// searches for the gpa of students on bus route 51
+// expected output:
+// GPA 1: 2.92
+// GPA 2: 3.02
+// GPA 3: 2.96
+// GPA 4: 3.12
+// GPA 5: 3.11
+// GPA 6: 3.09
+// GPA 7: 2.91
+// GPA 8: 3.03
+
+B: 51 A
+
+// TC-22
+// Tests Requirements NR5
+// fetches student gpa for students in 1st grade
+// expected output:
+// GPA 1: 2.85
+// GPA 2: 3.14
+
+G: 1 A
+
+// TC-23
+// Tests Requirements R3, R13
 // quit command
 // expected output: program terminates
 Q

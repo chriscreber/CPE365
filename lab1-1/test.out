@@ -1,13 +1,18 @@
 Hi welcome to the school search program!
 Select one:
 S[tudent]: <lastname> [B[us]]
-T[eacher]: <lastname>
-B[us]: <number>
-G[rade]: <number>
+T[eacher]: <lastname> [A[nalytics]]
+B[us]: <number>  [A[nalytics]]
+G[rade]: <number> [A[nalytics]|T[eachers]|[H[igh]]|[L[ow]]]
 A[verage]: <number>
+C[lassroom]: <number> S[tudents]|T[eachers]
+E[nrollment]
 I[nfo]
 Q[uit]
 
+Invalid Option... Try again
+
+Enter New Selection:
 Student 1
     Name: tory early
     Bus Route: 52
@@ -113,5 +118,66 @@ Enter New Selection:
 Average GPA in Grade 5: NaN
 
 Enter New Selection:
+
+Enter New Selection:
+Student 1
+      Name: carlee durand
+
+Enter New Selection:
+
+Enter New Selection:
+Teacher 1
+      Name: reuben cool
+
+Enter New Selection:
+Invalid Option... Try again
+
+Enter New Selection:
+Teachers for grade 1:
+    adolph falker
+
+Enter New Selection:
+Teachers for grade 4:
+    jed hantz
+    perla chionchio
+    reuben cool
+
+Enter New Selection:
+Classroom      Students
+101               1
+102               5
+103               2
+104               2
+105               6
+106               2
+107               7
+108               11
+109               5
+110               2
+111               9
+112               8
+
+Enter New Selection:
+GPA 1: 3.07
+GPA 2: 2.86
+GPA 3: 3.24
+GPA 4: 2.79
+GPA 5: 3.11
+GPA 6: 2.91
+GPA 7: 3.12
+
+Enter New Selection:
+GPA 1: 2.92
+GPA 2: 3.02
+GPA 3: 2.96
+GPA 4: 3.12
+GPA 5: 3.11
+GPA 6: 3.09
+GPA 7: 2.91
+GPA 8: 3.03
+
+Enter New Selection:
+GPA 1: 2.85
+GPA 2: 3.14
 
 Enter New Selection:

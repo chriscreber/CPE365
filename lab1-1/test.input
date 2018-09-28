@@ -1,3 +1,4 @@
+
 S: EARLY B
 T: FAFARD
 G: 1
@@ -11,4 +12,14 @@ G: 3 L
 A: B
 A: 5
 T: HANES
+C: 101 S
+C: 99 S
+C: 101 T
+C: 101
+G: 1 T
+G: 4 T
+E
+T: FAFARD A
+B: 51 A
+G: 1 A
 Q
