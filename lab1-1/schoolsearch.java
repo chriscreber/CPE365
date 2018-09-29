@@ -27,7 +27,9 @@ class Student {
       this.tFirstName = tFirstName;
    }
 
-   //Traceability: implements requirement(s) R4
+   // Traceability: implements requirements R4
+   // displays name, grade, classroom, and teacher name for students with given lastname
+   // S: <lastname>
    public static void studentSearch(ArrayList<Student> studentList, String stLastName) {
       int count = 1;
       for(Student student: studentList) {
@@ -43,7 +45,9 @@ class Student {
       }
    }
 
-   //Traceability: implements requirement(s) R5
+   // Traceability: implements requirements R5
+   // search for students with the given last name and provide bus route
+   // S: <lastname> B[us]
    public static void studentSearchBus(ArrayList<Student> studentList, String stLastName) {
       int count = 1;
       for(Student student: studentList) {
@@ -56,7 +60,9 @@ class Student {
       }
    }
 
-   //Traceability: implements requirement(s) R6
+   // Traceability: implements requirements R6
+   // searches and prints the names of the students with given teacher
+   // T: <lastname>
    public static void teacherSearch(ArrayList<Student> studentList, String teacherName) {
       int count = 1;
       for (Student student: studentList) {
@@ -68,7 +74,9 @@ class Student {
       }
    }
 
-   //Traceability: implements requirement(s) R7
+   // Traceability: implements requirements R7
+   // finds and prints all of the students for a given grade
+   // G: <number>
    public static void gradeSearch(ArrayList<Student> studentList, int grade) {
       int inst = 1;
       for(Student student: studentList) {
@@ -80,7 +88,9 @@ class Student {
       }
    }
 
-   //Traceability: implements requirement(s) R8
+   // Traceability: implements requirements R8
+   // displays student's name, grade, and classroom for a given bus route
+   // B: <number>
    public static void busSearch(ArrayList<Student> studentList, int busRoute) {
       int count = 1;
       for (Student student: studentList) {
@@ -94,7 +104,9 @@ class Student {
       }
    }
 
-   //Traceability: implements requirement(s) R9
+   // Traceability: implements requirements R9
+   // Given a grade and the H command, display the name, gpa, teacher, and bus route of the student with highest gpa
+   // G: <number> H
    public static void gradeSearchHigh(ArrayList<Student> studentList, int grade) {
       Student bestStudent = new Student("dummy", "dummy", 0, 0, 0, -1.0, "dummy", "dummy");
       for(Student student: studentList) {
@@ -111,7 +123,9 @@ class Student {
       System.out.println("Bus Route: " + bestStudent.bus);
    }
 
-   //Traceability: implements requirement(s) R9
+   // Traceability: implements requirements R9
+   // Given a grade and the L command, display the name, gpa, teacher, and bus route of the student with the lowest gpa
+   // G: <number> L
    public static void gradeSearchLow(ArrayList<Student> studentList, int grade) {
       Student worstStudent = new Student("dummy", "dummy", 0, 0, 0, 10.0, "dummy", "dummy");
       for(Student student: studentList) {
@@ -128,7 +142,9 @@ class Student {
       System.out.println("Bus Route: " + worstStudent.bus);
    }
 
-   //Traceability: implements requirement(s) R10
+   // Traceability: implements requirements R10
+   // compute the average student GPA for a given grade
+   // A: <number>
    public static void getAverageGPA(ArrayList<Student> studentList, int grade) {
       double total = 0;
       int numStudents = 0;
@@ -141,7 +157,9 @@ class Student {
       System.out.println("Average GPA in Grade " + grade + ": " + total/numStudents);
    }
 
-   //Traceability: implements requirement(s) R11
+   // Traceability: implements requirements R11
+   // For each grade (0-6), compute the total number of students in it, displayed in ascending order
+   // I
    public static void info(ArrayList<Student> studentList) {
       int[] classSizes = getCLassSizes(studentList);
       printInfo(classSizes);
@@ -174,16 +192,16 @@ class Student {
    //Traceability: implements requirement(s) R11
    public static void printInfo(int[] classSizes) {
       System.out.println("Gr     Count");
-      System.out.println("0   :  " + classSizes[0]);
-      System.out.println("1   :  " + classSizes[1]);
-      System.out.println("2   :  " + classSizes[2]);
-      System.out.println("3   :  " + classSizes[3]);
-      System.out.println("4   :  " + classSizes[4]);
-      System.out.println("5   :  " + classSizes[5]);
-      System.out.println("6   :  " + classSizes[6]);
+      for (int i = 0; i < 7; i++)
+         System.out.println(i + "   :  " + classSizes[i]);
    }
 
-   //Analysis
+   // Analysis
+
+
+   // Traceability: implements requirements NR5
+   // display all student gpas for a given teacher's last name
+   // T: <lastname> A
    public static void teacherSearchAnalysis(ArrayList<Student> studentList, String teacherName) {
       int count = 1;
       for (Student student: studentList) {
@@ -193,6 +211,9 @@ class Student {
       }
    }
 
+   // Traceability: implements requirements NR5
+   // display all student gpas for a given grade
+   // G: <number> A
    public static void gradeSearchAnalysis(ArrayList<Student> studentList, int grade) {
       int count = 1;
       for(Student student: studentList) {
@@ -202,6 +223,9 @@ class Student {
       }
    }
 
+   // Traceability: implements requirements NR5
+   // display all student gpas for a given bus route
+   // B: <number> A
    public static void busSearchAnalysis(ArrayList<Student> studentList, int busRoute) {
       int count = 1;
       for (Student student: studentList) {
@@ -209,6 +233,97 @@ class Student {
             System.out.println("GPA " + count++ + ": " + student.gpa);
          }
       }
+   }
+
+   // Extended Search
+
+   // Traceability: implements requirements NR1
+   // given a classroom number, list all students assigned to it
+   // C: <classroom> S
+   public static void classSearchStudent(ArrayList<Student> studentList, int classNum) {
+      int count = 1;
+      for (Student student : studentList) {
+         if (student.classroom == classNum) {
+            System.out.println("Student " + count++);
+            System.out.println("      Name: " + student.stFirstName + " " + student.stLastName);
+         }
+      }
+   }
+
+   // Traceability: implements requirements NR2
+   // given a classroom number, find the teacher (or teachres) teaching in it
+   // C: <classroom> T
+   public static void classSearchTeacher(ArrayList<Teacher> teacherList, int classNum) {
+      int count = 1;
+      for (Teacher teacher : teacherList) {
+         if (teacher.classroom == classNum) {
+            System.out.println("Teacher " + count++);
+            System.out.println("      Name: " + teacher.tFirstName + " " + teacher.tLastName);
+         }
+      }
+   }
+
+   // Traceability: implements requirements NR3
+   // given a grade, find all teachers who teach it
+   // G: <number> T
+   public static void searchGradeTeachers(ArrayList<Student> studentList, int grade) {
+      int count = 0;
+      ArrayList<String> tList = new ArrayList<String>();
+      for (Student student : studentList) {
+         if (student.grade == grade && !(tList.contains(student.tFirstName + " " + student.tLastName))) {
+            tList.add(count++, student.tFirstName + " " + student.tLastName);
+         }
+      }
+      System.out.println("Teachers for grade " + grade + ":");
+      for (String s : tList)
+         System.out.println("    " + s);
+
+   }
+
+   // Traceability: implements requirements NR4
+   // computes the total number of students in each of the classrooms
+   // E
+   public static void classroomEnrollment(ArrayList<Student> studentList, ArrayList<Teacher> teacherList) {
+      ArrayList<ClassSize> classrooms = new ArrayList<ClassSize>();
+      for (Teacher teacher : teacherList)
+         classrooms.add(new ClassSize(teacher.classroom));
+      for (Student student : studentList) {
+         incrementCount(classrooms, student.classroom);
+      }
+      System.out.println("Classroom      Students");
+      for (ClassSize room : classrooms)
+         System.out.println(room);
+   }
+
+   private static void incrementCount(ArrayList<ClassSize> classSizes, int roomNum) {
+      for (ClassSize room : classSizes) {
+         if (room.equals(roomNum))
+            room.incr();
+      }
+   }
+}
+
+class ClassSize {
+   int classroom, count;
+
+   public ClassSize(int roomNum) {
+      this.classroom = roomNum;
+      this.count = 0;
+   }
+
+   public void incr() {
+      ++this.count;
+   }
+
+   public String toString() {
+      return String.format("%3s               ",this.classroom) + this.count;
+   }
+
+   public boolean equals(int n) {
+      if (this.classroom == n)
+         return true;
+      else
+         return false;
    }
 }
 
@@ -221,7 +336,6 @@ class Teacher {
       this.tFirstName = tFirstName;
       this.classroom = classroom;
    }
-
 }
 
 public class schoolsearch {
@@ -280,8 +394,10 @@ public static void main(String[] args){
    System.out.println("S[tudent]: <lastname> [B[us]]");
    System.out.println("T[eacher]: <lastname> [A[nalytics]]");
    System.out.println("B[us]: <number>  [A[nalytics]]");
-   System.out.println("G[rade]: <number> [A[nalytics]]");
+   System.out.println("G[rade]: <number> [A[nalytics]|T[eachers]|[H[igh]]|[L[ow]]]");
    System.out.println("A[verage]: <number>");
+   System.out.println("C[lassroom]: <number> S[tudents]|T[eachers]");
+   System.out.println("E[nrollment]");
    System.out.println("I[nfo]");
    System.out.println("Q[uit]");
    System.out.println();
@@ -324,6 +440,13 @@ public static void main(String[] args){
                   } else if(strArr.length == 3 && strArr[2].equals("a")) {
                      try {
                         Student.gradeSearchAnalysis(studentList, Integer.parseInt(strArr[1]));
+                     } catch (Exception e) {
+                        System.out.println("Entered Not a Number for Grade... Try again");
+                        break;
+                     }
+                  } else if(strArr.length == 3 && strArr[2].equals("t")) {
+                     try {
+                        Student.searchGradeTeachers(studentList, Integer.parseInt(strArr[1]));
                      } catch (Exception e) {
                         System.out.println("Entered Not a Number for Grade... Try again");
                         break;
@@ -373,6 +496,28 @@ public static void main(String[] args){
                   break;
          case "i": Student.info(studentList);
                   break;
+         case "e": Student.classroomEnrollment(studentList, teacherList);
+                  break;
+         case "c:": if (strArr.length == 3) {
+                        if (strArr[2].equals("s")) {
+                           try {
+                              Student.classSearchStudent(studentList, Integer.parseInt(strArr[1]));
+                              break;
+                           } catch (Exception e) {
+                              System.out.println("Entered Not a Number for Classroom... Try again");
+                              break;
+                           }
+                        }
+                        else if (strArr[2].equals("t")) {
+                           try {
+                              Student.classSearchTeacher(teacherList, Integer.parseInt(strArr[1]));
+                              break;
+                           } catch (Exception e) {
+                              System.out.println("Entered Not a Number for Classroom... Try again");
+                              break;
+                           }
+                        }
+                     }
          default: System.out.println("Invalid Option... Try again");
                   break;
       }
