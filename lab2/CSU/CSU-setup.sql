@@ -33,10 +33,22 @@ CREATE TABLE IF NOT EXISTS fees (
 --     Campus : unique identifier of campus (see Campuses.Id)
 --    Degrees : number of undergraduate degrees conferred
 CREATE TABLE IF NOT EXISTS degrees (
-   campus TINYINT UNSIGNED,
    year SMALLINT UNSIGNED,
+   campus TINYINT UNSIGNED,
+   degrees INT UNSIGNED,
    PRIMARY KEY (campus),
    FOREIGN KEY (campus) REFERENCES Campuses(id)
+);
+
+--     Id, Name
+--
+--          Id : unique identifier of the academic discipline
+--        Name : name of the discipline (e.g., "Engineering")
+CREATE TABLE IF NOT EXISTS disciplines (
+   d_id TINYINT UNSIGNED,
+   discipline VARCHAR(29) UNIQUE,
+   PRIMARY KEY (d_id),
+   FOREIGN KEY (d_id) REFERENCES Campuses(id)
 );
 
 --       Campus, Discipline, Year, Undergraduate, Graduate
@@ -56,17 +68,6 @@ CREATE TABLE IF NOT EXISTS discipline_enrollments (
    PRIMARY KEY (campus),
    FOREIGN KEY (campus) REFERENCES Campuses(id),
    FOREIGN KEY (discipline) REFERENCES disciplines(d_id)
-);
-
---     Id, Name
---
---          Id : unique identifier of the academic discipline
---        Name : name of the discipline (e.g., "Engineering")
-CREATE TABLE IF NOT EXISTS disciplines (
-   d_id TINYINT UNSIGNED,
-   discipline VARCHAR(29) UNIQUE,
-   PRIMARY KEY (d_id),
-   FOREIGN KEY (d_id) REFERENCES Campuses(id)
 );
 
 --       Campus, Year, TotalEnrollment_AY, FTE_AY
