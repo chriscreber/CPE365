@@ -1,0 +1,7 @@
+
+python csvToSql.py car-makers.csv car_makers CARS-build-car-makers.sql
+python csvToSql.py car-names.csv car_names CARS-build-car-names.sql
+python csvToSql.py cars-data.csv cars_data CARS-build-cars-data.sql
+python csvToSql.py continents.csv continents CARS-build-continents.sql
+python csvToSql.py countries.csv countries CARS-build-countries.sql
+python csvToSql.py model-list.csv model_list CARS-build-model-list.sql
