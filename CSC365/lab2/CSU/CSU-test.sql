@@ -1,3 +1,6 @@
+-- Christopher Creber, Jett Moy
+-- ccreber@calpoly.edu
+
 SELECT * FROM Campuses;
 
 SELECT COUNT(*) FROM Campuses;

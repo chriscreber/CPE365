@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 INSERT INTO students VALUES ('CAR', 'MAUDE', 2, 101);
 INSERT INTO students VALUES ('KRISTENSEN', 'STORMY', 6, 112);
 INSERT INTO students VALUES ('VANDERWOUDE', 'SHERWOOD', 3, 107);

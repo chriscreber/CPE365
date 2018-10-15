@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 INSERT INTO items VALUES (18129, 1,  '70-TU');
 INSERT INTO items VALUES (51991, 1,  '90-APIE-10');
 INSERT INTO items VALUES (51991, 2,  '90-CH-PF');

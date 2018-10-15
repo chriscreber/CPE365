@@ -1,3 +1,6 @@
+-- Christopher Creber, Jett Moy
+-- ccreber@calpoly.edu
+
 INSERT INTO enrollments VALUES (1,1956,384,123);
 INSERT INTO enrollments VALUES (1,1957,432,151);
 INSERT INTO enrollments VALUES (1,1958,422,178);

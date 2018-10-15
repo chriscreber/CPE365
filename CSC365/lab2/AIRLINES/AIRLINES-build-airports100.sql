@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 INSERT INTO airports VALUES ('Aberdeen ','APG','Phillips AAF ','United States ','US ');
 INSERT INTO airports VALUES ('Aberdeen ','ABR','Municipal ','United States ','US ');
 INSERT INTO airports VALUES ('Abilene ','DYS','Dyess AFB ','United States ','US ');

@@ -1,3 +1,6 @@
+-- Christopher Creber, Jett Moy
+-- ccreber@calpoly.edu
+
 INSERT INTO Campuses VALUES (1,'California State University-Bakersfield','Bakersfield','Kern',1965);
 INSERT INTO Campuses VALUES (2,'California State University-Channel Islands','Camarillo','Ventura',2002);
 INSERT INTO Campuses VALUES (3,'California State University-Chico','Chico','Butte',1887);

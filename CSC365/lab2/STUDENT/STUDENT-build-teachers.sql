@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 INSERT INTO teachers VALUES ('MACROSTIE', 'MIN', 101);
 INSERT INTO teachers VALUES ('COVIN', 'JEROME', 102);
 INSERT INTO teachers VALUES ('MOYER', 'OTHA', 103);

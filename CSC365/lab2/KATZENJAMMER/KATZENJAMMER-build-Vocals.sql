@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 INSERT INTO vocals VALUES (2,1,'lead');
 INSERT INTO vocals VALUES (2,3,'chorus');
 INSERT INTO vocals VALUES (2,4,'chorus');

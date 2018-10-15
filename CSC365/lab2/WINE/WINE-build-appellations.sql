@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 INSERT INTO appellations VALUES (1,'Alexander Valley','Sonoma','California','North Coast','Yes');
 INSERT INTO appellations VALUES (2,'Amador County','Amador','California','Sierra Foothills','No');
 INSERT INTO appellations VALUES (3,'Amador-Mendocino-Sonoma Counties','N/A','California','N/A','No');

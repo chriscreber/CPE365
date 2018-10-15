@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 INSERT INTO tracklists VALUES (1,1,1);
 INSERT INTO tracklists VALUES (1,2,2);
 INSERT INTO tracklists VALUES (1,3,3);

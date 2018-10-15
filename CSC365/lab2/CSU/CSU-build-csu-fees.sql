@@ -1,3 +1,6 @@
+-- Christopher Creber, Jett Moy
+-- ccreber@calpoly.edu
+
 INSERT INTO fees VALUES (1,1996,1951);
 INSERT INTO fees VALUES (3,1996,2042);
 INSERT INTO fees VALUES (4,1996,1816);

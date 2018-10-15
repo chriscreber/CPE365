@@ -1,3 +1,6 @@
+-- Christopher Creber, Jett Moy
+-- ccreber@calpoly.edu
+
 INSERT INTO cars_data VALUES (1,18,8,307,130,3504,12,1970);
 INSERT INTO cars_data VALUES (2,15,8,350,165,3693,11.5,1970);
 INSERT INTO cars_data VALUES (3,18,8,318,150,3436,11,1970);

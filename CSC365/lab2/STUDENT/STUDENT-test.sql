@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 SELECT * FROM list;
 
 SELECT COUNT(*) FROM list;

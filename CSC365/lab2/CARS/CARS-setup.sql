@@ -1,3 +1,6 @@
+-- Christopher Creber, Jett Moy
+-- ccreber@calpoly.edu
+
 -- ContId : unique identifier of the continent
      -- Continent : name of the continent
 CREATE TABLE IF NOT EXISTS continents (

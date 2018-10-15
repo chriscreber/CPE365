@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 --   AId: unique identifier of the album
 -- Title: title of the album
 --  Year: year the album was released

@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 INSERT INTO grapes VALUES (1,'Barbera','Red');
 INSERT INTO grapes VALUES (2,'Cabernet Franc','Red');
 INSERT INTO grapes VALUES (3,'Cabernet Sauvingnon','Red');

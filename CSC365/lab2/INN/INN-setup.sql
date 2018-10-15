@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
  --       RoomId : a three-letter unique Id code of a room
  --    roomName  : official name of the room (all rooms in B&B inns
  --                   typically have names)

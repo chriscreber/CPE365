@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 INSERT INTO customers VALUES (1, 'LOGAN', 'JULIET');
 INSERT INTO customers VALUES (2, 'ARZT', 'TERRELL');
 INSERT INTO customers VALUES (3, 'ESPOSITA', 'TRAVIS');

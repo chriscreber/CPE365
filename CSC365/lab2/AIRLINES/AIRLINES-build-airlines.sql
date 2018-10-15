@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 INSERT INTO airlines VALUES (1,'United Airlines','UAL','USA');
 INSERT INTO airlines VALUES (2,'US Airways','USAir','USA');
 INSERT INTO airlines VALUES (3,'Delta Airlines','Delta','USA');

@@ -1,3 +1,6 @@
+-- Christopher Creber, Jett Moy
+-- ccreber@calpoly.edu
+
 -- Id, Campus, Location, County, Year
 --
 --     Id : unique identifier for each campus

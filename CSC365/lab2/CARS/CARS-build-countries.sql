@@ -1,3 +1,6 @@
+-- Christopher Creber, Jett Moy
+-- ccreber@calpoly.edu
+
 INSERT INTO countries VALUES (1,'usa',1);
 INSERT INTO countries VALUES (2,'germany',2);
 INSERT INTO countries VALUES (3,'france',2);

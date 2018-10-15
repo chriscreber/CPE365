@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
  --        Id: unique identifier of the customer
  --  LastName: last name of the customer
  -- FirstName: first name of the customer

@@ -1,3 +1,6 @@
+-- Christopher Creber, Jett Moy
+-- ccreber@calpoly.edu
+
 INSERT INTO model_list VALUES (1,1,'amc');
 INSERT INTO model_list VALUES (2,2,'audi');
 INSERT INTO model_list VALUES (3,3,'bmw');

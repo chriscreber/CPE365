@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
   --         Id   : unique identifier of the airline
   --      Airline : full name of the airline
   -- Abbreviation : abbreviated name of the airline

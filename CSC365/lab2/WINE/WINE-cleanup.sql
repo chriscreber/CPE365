@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 -- WINE CLEANUP
 
 DROP TABLE wine;

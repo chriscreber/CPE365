@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 -- KATZENJAMMER CLEANUP
 
 DROP TABLE vocals;

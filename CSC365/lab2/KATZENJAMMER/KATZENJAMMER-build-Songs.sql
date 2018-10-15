@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 INSERT INTO songs VALUES (1,"Overture");
 INSERT INTO songs VALUES (2,"A Bar In Amsterdam");
 INSERT INTO songs VALUES (3,"Demon Kitty Rag");

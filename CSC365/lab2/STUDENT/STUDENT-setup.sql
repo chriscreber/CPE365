@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 --  LastName : last name of the student
 -- FirstName : first name of the student
 --     Grade : grade the student attends

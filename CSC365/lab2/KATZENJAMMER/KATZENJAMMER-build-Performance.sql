@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 INSERT INTO performance VALUES (1,1,'back');
 INSERT INTO performance VALUES (1,2,'left');
 INSERT INTO performance VALUES (1,3,'center');

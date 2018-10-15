@@ -1,3 +1,5 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
 
 --        No : line number in the CSV file
 -- Appelation: name of the appelation/AVA/grape-growing region

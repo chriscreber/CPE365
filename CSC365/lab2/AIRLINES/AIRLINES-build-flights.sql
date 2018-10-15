@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 INSERT INTO flights VALUES (1, 28, 'APG', 'ASY');
 INSERT INTO flights VALUES (1, 29, 'ASY', 'APG');
 INSERT INTO flights VALUES (1, 44, 'CVO', 'ACV');

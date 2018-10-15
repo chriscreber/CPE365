@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 SELECT * FROM airlines;
 
 SELECT COUNT(*) FROM airlines;

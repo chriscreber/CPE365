@@ -1,3 +1,6 @@
+-- Christopher Creber, Jett Moy
+-- ccreber@calpoly.edu
+
 INSERT INTO car_makers VALUES (1,'amc','American Motor Company',1);
 INSERT INTO car_makers VALUES (2,'volkswagen','Volkswagen',2);
 INSERT INTO car_makers VALUES (3,'bmw','BMW',2);

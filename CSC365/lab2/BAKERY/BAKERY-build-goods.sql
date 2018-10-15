@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 INSERT INTO goods VALUES ('20-BC-C-10','Chocolate','Cake',8.95);
 INSERT INTO goods VALUES ('20-BC-L-10','Lemon','Cake',8.95);
 INSERT INTO goods VALUES ('20-CA-7.5','Casino','Cake',15.95);

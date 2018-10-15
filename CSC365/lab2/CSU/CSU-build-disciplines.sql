@@ -1,3 +1,6 @@
+-- Christopher Creber, Jett Moy
+-- ccreber@calpoly.edu
+
 INSERT INTO disciplines VALUES (1,'Agriculture');
 INSERT INTO disciplines VALUES (2,'Architecture');
 INSERT INTO disciplines VALUES (3,'Area Studies');

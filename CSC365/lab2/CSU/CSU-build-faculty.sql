@@ -1,3 +1,6 @@
+-- Christopher Creber, Jett Moy
+-- ccreber@calpoly.edu
+
 INSERT INTO faculty VALUES (1,2002,357.1);
 INSERT INTO faculty VALUES (2,2002,48.4);
 INSERT INTO faculty VALUES (3,2002,742.8);

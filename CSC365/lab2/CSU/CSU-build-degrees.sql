@@ -1,3 +1,6 @@
+-- Christopher Creber, Jett Moy
+-- ccreber@calpoly.edu
+
 INSERT INTO degrees VALUES (1990,1,701);
 INSERT INTO degrees VALUES (1991,1,681);
 INSERT INTO degrees VALUES (1992,1,791);

@@ -1,3 +1,6 @@
+-- Christopher Creber, Jett Moy
+-- ccreber@calpoly.edu
+
 -- CARS CLEANUP
 
 DROP TABLE cars_data;

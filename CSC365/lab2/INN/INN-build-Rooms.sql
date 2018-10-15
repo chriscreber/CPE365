@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 INSERT INTO rooms VALUES ('RND','Recluse and defiance',1,'King',2,150,'modern');
 INSERT INTO rooms VALUES ('IBS','Interim but salutary',1,'King',2,150,'traditional');
 INSERT INTO rooms VALUES ('AOB','Abscond or bolster',2,'Queen',4,175,'traditional');

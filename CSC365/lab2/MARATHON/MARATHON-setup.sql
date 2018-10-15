@@ -1,3 +1,6 @@
+-- Christopher Creber, Jett Moy
+-- ccreber@calpoly.edu
+
 -- Place : overall place of the participant in the race
 -- Time : time the participant took to run the race (hh:mi:ss)
 -- Pace : participant's pace in the race (mi:ss)

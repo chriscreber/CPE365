@@ -1,3 +1,6 @@
+-- Christopher Creber, Jett Moy
+-- ccreber@calpoly.edu
+
 INSERT INTO discipline_enrollments VALUES (1,4,2004,248,0);
 INSERT INTO discipline_enrollments VALUES (1,5,2004,811,73);
 INSERT INTO discipline_enrollments VALUES (1,6,2004,199,0);

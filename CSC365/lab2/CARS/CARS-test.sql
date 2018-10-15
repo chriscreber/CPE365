@@ -1,3 +1,6 @@
+-- Christopher Creber, Jett Moy
+-- ccreber@calpoly.edu
+
 SELECT * FROM car_makers;
 
 SELECT COUNT(*) FROM car_makers;

@@ -1,3 +1,6 @@
+-- Christopher Creber, Jett Moy
+-- ccreber@calpoly.edu
+
 INSERT INTO marathon VALUES (1,'1:09:47','5:20',1,'20-39',37,'M',340,'ANDRE', 'PELLAM', 'HALIFAX','MA');
 INSERT INTO marathon VALUES (2,'1:11:08','5:26',2,'20-39',29,'M',34,'HORACE', 'KARPOWICZ', 'BREWSTER','MA');
 INSERT INTO marathon VALUES (3,'1:15:43','5:47',3,'20-39',27,'M',399,'MILES', 'ROSELLA', 'PEACEDALE','RI');

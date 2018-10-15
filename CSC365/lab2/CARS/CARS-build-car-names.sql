@@ -1,3 +1,6 @@
+-- Christopher Creber, Jett Moy
+-- ccreber@calpoly.edu
+
 INSERT INTO car_names VALUES (1,'chevrolet','chevrolet chevelle malibu');
 INSERT INTO car_names VALUES (2,'buick','buick skylark 320');
 INSERT INTO car_names VALUES (3,'plymouth','plymouth satellite');

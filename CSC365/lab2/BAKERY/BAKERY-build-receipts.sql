@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 INSERT INTO receipts VALUES (18129, '28-Oct-2007', 15);
 INSERT INTO receipts VALUES (51991, '17-Oct-2007', 14);
 INSERT INTO receipts VALUES (83085, '12-Oct-2007', 7);

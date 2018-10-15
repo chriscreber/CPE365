@@ -1,3 +1,6 @@
+-- Christopher Creber, Jett Moy
+-- ccreber@calpoly.edu
+
 -- CSU CLEANUP
 
 DROP TABLE fees;

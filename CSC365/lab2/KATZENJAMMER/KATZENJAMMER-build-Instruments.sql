@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 INSERT INTO instruments VALUES (1,1,'trumpet');
 INSERT INTO instruments VALUES (1,2,'keyboard');
 INSERT INTO instruments VALUES (1,3,'accordion');

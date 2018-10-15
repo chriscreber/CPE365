@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 INSERT INTO wine VALUES (1,'Zinfandel','Robert Biale','St. Helena','California','Old Kraft Vineyard',2008,44,93,275,'now');
 INSERT INTO wine VALUES (2,'Zinfandel','Chiarello Family','Napa Valley','California','Giana',2008,35,93,480,'now');
 INSERT INTO wine VALUES (3,'Zinfandel','Robert Biale','Napa Valley','California','Black Chicken',2008,40,91,2700,2012);
