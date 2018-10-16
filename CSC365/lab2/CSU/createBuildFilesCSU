@@ -1,8 +1,0 @@
-
-python csvToSql.py CSU/Campuses.csv Campuses CSU-build-Campuses.sql
-python csvToSql.py CSU/csu-fees.csv fees CSU-build-csu-fees.sql
-python csvToSql.py CSU/degrees.csv degrees CSU-build-degrees.sql
-python csvToSql.py CSU/discipline-enrollments.csv discipline_enrollments CSU-build-discipline-enrollments.sql
-python csvToSql.py CSU/disciplines.csv disciplines CSU-build-disciplines.sql
-python csvToSql.py CSU/enrollments.csv enrollments CSU-build-enrollments.sql
-python csvToSql.py CSU/faculty.csv faculty CSU-build-faculty.sql

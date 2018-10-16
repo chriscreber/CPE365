@@ -1,4 +1,0 @@
--- STUDENT CLEANUP
-
-DROP TABLE teachers;
-DROP TABLE students;
