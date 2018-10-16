@@ -42,7 +42,7 @@ CREATE TABLE wine (
    id SMALLINT UNSIGNED PRIMARY KEY,
    grape VARCHAR(21) REFERENCES grapes(grape),
    winery VARCHAR(32),
-   appelation VARCHAR(38) REFERENCES appelations(appelation),
+   appellation VARCHAR(38) REFERENCES appelations(appelation),
    state VARCHAR(12) REFERENCES appelations(state),
    name VARCHAR(51),
    year YEAR,
