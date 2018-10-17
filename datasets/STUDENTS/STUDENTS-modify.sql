@@ -33,7 +33,7 @@ WHERE lastName = "GERSTEIN" AND firstName = "AL";
 
 UPDATE students
 SET gpa = ROUND(gpa * 1.1, 2)
-WHERE lastName = "HUANG" AND firstName = "TAWANNA" OR lastName = "JAGNEUX" AND firstName = "ELVIRA";
+WHERE lastName = "HUANG" AND firstName = "TAWANNA" OR lastName = "JAGNEAUX" AND firstName = "ELVIRA";
 
 SELECT * FROM students
 ORDER BY gpa, grade, lastName;
