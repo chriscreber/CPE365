@@ -1,5 +1,5 @@
--- Christopher Creber
--- ccreber@calpoly.edu
+-- Christopher Creber         Jett Moy
+-- ccreber@calpoly.edu        jlmoy@calpoly.edu
 
 INSERT INTO albums VALUES (1,'Le Pop',2008,'Propeller Recordings','Studio');
 INSERT INTO albums VALUES (2,'A Kiss Before You Go',2011,'Propeller Recordings','Studio');

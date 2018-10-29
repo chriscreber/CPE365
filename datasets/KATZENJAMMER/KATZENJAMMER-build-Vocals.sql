@@ -1,5 +1,5 @@
--- Christopher Creber
--- ccreber@calpoly.edu
+-- Christopher Creber         Jett Moy
+-- ccreber@calpoly.edu        jlmoy@calpoly.edu
 
 INSERT INTO vocals VALUES (2,1,'lead');
 INSERT INTO vocals VALUES (2,3,'chorus');

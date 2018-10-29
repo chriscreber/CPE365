@@ -1,3 +1,6 @@
+-- Christopher Creber            Jett Moy
+-- ccreber@calpoly.edu           jlmoy@calpoly.edu
+
 ALTER TABLE students
 ADD gpa DOUBLE;
 

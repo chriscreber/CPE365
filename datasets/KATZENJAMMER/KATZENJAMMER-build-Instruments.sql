@@ -1,5 +1,5 @@
--- Christopher Creber
--- ccreber@calpoly.edu
+-- Christopher Creber         Jett Moy
+-- ccreber@calpoly.edu        jlmoy@calpoly.edu
 
 INSERT INTO instruments VALUES (1,1,'trumpet');
 INSERT INTO instruments VALUES (1,2,'keyboard');

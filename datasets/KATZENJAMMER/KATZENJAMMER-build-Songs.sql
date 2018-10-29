@@ -1,5 +1,5 @@
--- Christopher Creber
--- ccreber@calpoly.edu
+-- Christopher Creber         Jett Moy
+-- ccreber@calpoly.edu        jlmoy@calpoly.edu
 
 INSERT INTO songs VALUES (1,"Overture");
 INSERT INTO songs VALUES (2,"A Bar In Amsterdam");

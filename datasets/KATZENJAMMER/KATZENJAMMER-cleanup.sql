@@ -1,5 +1,5 @@
--- Christopher Creber
--- ccreber@calpoly.edu
+-- Christopher Creber         Jett Moy
+-- ccreber@calpoly.edu        jlmoy@calpoly.edu
 
 -- KATZENJAMMER CLEANUP
 

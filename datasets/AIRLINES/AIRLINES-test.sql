@@ -1,13 +1,13 @@
--- Christopher Creber
--- ccreber@calpoly.edu
+-- Christopher Creber         Jett Moy
+-- ccreber@calpoly.edu        jlmoy@calpoly.edu
 
 SELECT * FROM airlines;
 
 SELECT COUNT(*) FROM airlines;
 
-SELECT * FROM airports100;
+SELECT * FROM airports;
 
-SELECT COUNT(*) FROM airports100;
+SELECT COUNT(*) FROM airports;
 
 SELECT * FROM flights;
 

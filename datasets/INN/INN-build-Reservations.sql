@@ -1,5 +1,5 @@
--- Christopher Creber
--- ccreber@calpoly.edu
+-- Christopher Creber         Jett Moy
+-- ccreber@calpoly.edu        jlmoy@calpoly.edu
 
 INSERT INTO reservations VALUES (47496,'RND','01-JAN-10','06-JAN-10',150.00,'KLEVER','ERASMO',1,0);
 INSERT INTO reservations VALUES (41112,'RND','06-JAN-10','11-JAN-10',135.00,'HOOLEY','EUGENIO',1,0);

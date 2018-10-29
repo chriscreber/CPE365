@@ -1,5 +1,5 @@
--- Christopher Creber
--- ccreber@calpoly.edu
+-- Christopher Creber         Jett Moy
+-- ccreber@calpoly.edu        jlmoy@calpoly.edu
 
 INSERT INTO band VALUES (1,'Solveig','Heilo');
 INSERT INTO band VALUES (2,'Marianne','Sveen');
