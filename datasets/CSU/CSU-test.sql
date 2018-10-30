@@ -5,9 +5,9 @@ SELECT * FROM Campuses;
 
 SELECT COUNT(*) FROM Campuses;
 
-SELECT * FROM csu;
+SELECT * FROM fees;
 
-SELECT COUNT(*) FROM csu;
+SELECT COUNT(*) FROM fees;
 
 SELECT * FROM degrees;
 

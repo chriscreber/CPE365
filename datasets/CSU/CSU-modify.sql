@@ -14,3 +14,8 @@ DELETE FROM discipline_enrollments
 SELECT *
 FROM discipline_enrollments
 ORDER BY campus, discipline;
+
+-- 3 Keep in table only fee > 2500, year is 2002 or  2004-06, and CP SLO/Pomona or SJSU
+
+DELETE FROM fees
+   WHERE fee <= 2500 AND (year = 2002 OR (year BETWEEN 2004 AND 2006))
