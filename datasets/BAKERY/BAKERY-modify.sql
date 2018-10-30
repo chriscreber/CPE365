@@ -1,3 +1,6 @@
+-- Christopher Creber
+-- ccreber@calpoly.edu
+
 DELETE FROM goods
 WHERE food != "Cake";
 
