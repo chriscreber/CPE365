@@ -1,9 +1,9 @@
 -- Jett Moy
 -- jlmoy@calpoly.edu
 
-SELECT * FROM list;
+SELECT * FROM students;
 
-SELECT COUNT(*) FROM list;
+SELECT COUNT(*) FROM students;
 
 SELECT * FROM teachers;
 
