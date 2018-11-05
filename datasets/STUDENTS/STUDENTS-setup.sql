@@ -9,7 +9,8 @@ CREATE TABLE students (
    lastName VARCHAR(13),
    firstName VARCHAR(14),
    grade TINYINT UNSIGNED,
-   classroom SMALLINT UNSIGNED
+   classroom SMALLINT UNSIGNED,
+   PRIMARY KEY (lastName, firstName, grade, classroom)
 );
 
 --  LastName : last name of the teacher
@@ -17,6 +18,7 @@ CREATE TABLE students (
 -- Classroom : classroom the teacher is assigned to
 CREATE TABLE teachers (
    lastName VARCHAR(11),
-   firtName VARCHAR(12),
-   classroom SMALLINT UNSIGNED
+   firstName VARCHAR(12),
+   classroom SMALLINT UNSIGNED,
+   PRIMARY KEY (lastName, firstName, classroom)
 );
