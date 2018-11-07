@@ -8,7 +8,7 @@ SELECT RoomName, RoomId
 FROM rooms
 WHERE Decor = 'modern' AND BasePrice < 160 AND Beds = 2;
 
--- Q2 
+-- Q2
 
 SELECT LastName, CheckIn, CheckOut, Adults + Kids, Rate
 FROM rooms r, reservations res
