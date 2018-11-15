@@ -19,7 +19,7 @@ AND w2.Winery = "Rosenblum"
 AND 12 * w.Cases * w.Price > 12 * w2.Cases * w2.Price
 ORDER BY revenue;
 
--- Q2. Find the average score of a ‘Paso Robles’ ‘Zinfandel’ (grape on name?).
+-- Q2. Find the average score of a ‘Paso Robles’ ‘Zinfandel’ (grape).
 
 SELECT AVG(score)
 FROM wine w
@@ -35,7 +35,7 @@ ON w.Grape = g.Grape
 WHERE w.Winery = "Kosta Browne"
 AND g.Color = "Red";
 
--- Q4. Find the average number of cases of a ‘Pinor Noir’ (grape on name?) produced from grapes sourced from the
+-- Q4. Find the average number of cases of a ‘Pinot Noir’ (name) produced from grapes sourced from the
 -- ‘Central Coast’.
 
 SELECT AVG(Cases)

@@ -8,19 +8,20 @@ FROM rooms rm
 INNER JOIN reservations res1
 ON rm.RoomId = res1.Room
 INNER JOIN reservations res2
-ON rm.RoomId = res2.Room -- AND res1.Code = res2.Code
+ON rm.RoomId = res2.Room
 INNER JOIN reservations res3
-ON rm.RoomId = res3.Room -- AND res1.Code = res3.Code AND res3.Code = res2.Code
+ON rm.RoomId = res3.Room
 WHERE DATE(res1.CheckIn) <= DATE("2010-06-15") AND DATE(res1.CheckOut) >= DATE("2010-06-15")
 AND DATE(res2.CheckIn) <= DATE("2010-08-18") AND DATE(res2.CheckOut) >= DATE("2010-08-18")
 AND DATE(res3.CheckIn) <= DATE("2010-12-12") AND DATE(res3.CheckOut) >= DATE("2010-12-12")
 ORDER BY rm.RoomName;
 
--- Q2
+-- Q2  Find the names of all people1
+-- staying at the inn at the same time as ‘HERBERT FRYDAY’. Sort
+-- the output in alphabetical order by last name.
+
 SELECT res1.LastName, res1.FirstName
 FROM reservations res, reservations res1
--- INNER JOIN reservations res1
--- ON res.Code = res1.Code
 WHERE res.FirstName = "HERBERT" AND res.LastName = "FRYDAY"
 AND !(res1.FirstName = "HERBERT" AND res1.LastName = "FRYDAY")
 AND (((DATE(res1.CheckIn) <= DATE(res.CheckIn) AND DATE(res1.CheckOut) >= DATE(res.CheckIn))
