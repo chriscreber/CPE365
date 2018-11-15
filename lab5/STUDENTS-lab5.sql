@@ -1,17 +1,13 @@
-1. Find all pairs of students with the same first name. Report each pair of students exactly once.
-   Report first and last names of each of the two students, and their grades.
+-- Jett Moy                Chris Creber
+-- jlmoy                   ccreber
 
-(SELECT FirstName
-FROM list s
-GROUP BY FirstName
-   HAVING COUNT(*) > 1)
-   ON s.
-SELECT LastName, Grade
-FROM list;
+-- 1
 
+SELECT a.FirstName, a.LastName, a.Grade
+FROM list a, list b
+WHERE a.FirstName = b.FirstName AND a.LastName != b.LastName;
 
-2. Find all first-grade students who are NOT taught by ‘OTHA MOYER’.
-   Report their first and last names in alphabetical order by last name.
+-- 2
 
 SELECT l.FirstName, l.LastName
 FROM list l
@@ -20,7 +16,7 @@ FROM list l
 WHERE !(t.FirstName = "Otha" AND t.LastName = "Moyer") AND Grade = 1
 ORDER BY LastName;
 
-3. Report the total number of third- and fourth-graders in the school.
+-- 3
 
 SELECT Grade, count(*) Students
 FROM list l
@@ -34,7 +30,8 @@ FROM list l
       ON l.Classroom = t.Classroom
 WHERE Grade = 4;
 
-4. Find and report the number of students taught by ‘LORIA ONDERSMA’.
+-- 4
+
 SELECT count(*) Students
 FROM list l
    JOIN teachers t

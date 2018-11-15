@@ -1,29 +1,30 @@
-1. Find all cars made after 1980 with gas mileage better than the 1982 ‘honda civic’.
-   Reportfull name of the car, year it was made and the name of the manufacturer. Sort output in descending order by gas mileage.
+-- Jett Moy          Chris Creber
+-- jlmoy             ccreber
 
-SELECT *
-FROM carNames n
-   NATURAL JOIN carsData d
-WHERE yearMade > 1980;
+-- 1
 
-2. Find the average, maximum, and minimum horsepower for 4-cylinder vehicles manufactured by ‘renault’ between 1971 and 1976 inclusive.
+SELECT  n.Description, d.YearMade, m.FullName Manufacturer
+FROM carsData d, carNames n, carsData d2, carNames n2, carMakers m, modelList l
+WHERE d2.YearMade = 1982 AND d2.Id = n2.Id AND d.Id = n.Id
+AND n2.Description = "honda civic"
+AND d.MPG > d2.MPG AND d.YearMade > 1980
+AND l.Model = n.Model AND l.Maker = m.Id
+ORDER BY d.MPG DESC;
+
+-- 2
 
 SELECT AVG(MPG) Average, MAX(MPG) Maximum, MIN(MPG) Minimum
 FROM carsData
    NATURAL JOIN carNames
 WHERE Model = "renault" AND YearMade BETWEEN 1971 AND 1976 AND Cylinders = 4;
 
-3. Find how many cars produced in 1971 had better acceleration than a 1972 ‘volvo 145e (sw)’. Report just the number.
+-- 3
 
 SELECT COUNT(*) Count
-FROM carsData
-WHERE YearMade = 1971
-   AND Accelerate < (SELECT Accelerate
-                     FROM carNames
-                        NATURAL JOIN carsData
-                     WHERE Description = "volvo 145e (sw)");
+FROM carsData d, carsData v, carNames n
+WHERE n.Id = v.Id AND d.YearMade = 1971 AND n.Description = "volvo 145e (sw)" AND d.Accelerate < v.Accelerate;
 
-4. Find how many different car manufacturers produced a vehicle heavier than 4000 lbs.
+-- 4
 
 SELECT COUNT(DISTINCT FullName) NumMakers
 FROM carsData d
