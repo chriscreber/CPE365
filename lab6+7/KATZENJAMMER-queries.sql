@@ -20,12 +20,12 @@ ORDER BY b.FirstName;
 -- instrument on the same song. Sort output in alphabetical order by first name of the performer
 -- .
 
--- Not complete
-SELECT b.FirstName, COUNT(b.FirstName)
+-- Not complete technically
+SELECT b.FirstName, COUNT(b.FirstName), IF(COUNT(i.Instrument) > 1, "Yes", "No")
 FROM instruments i
 INNER JOIN band b
 ON i.Bandmate = b.BandId
-GROUP BY i.Song, i.Bandmate
+GROUP BY i.Bandmate, i.Song
 HAVING COUNT(i.Instrument) > 1
 ORDER BY b.FirstName;
 
@@ -77,12 +77,10 @@ GROUP BY b.FirstName);
 -- played—make sure to not count two different performers playing the same instrument on the
 -- same song twice).
 
--- Not good waaayyy off
+-- Doesn't cover the part mentioned in the note ^
 SELECT i.Instrument
-FROM (SELECT i2.Song, i2.Instrument
-FROM instruments i2
-WHERE Bandmate = 1
-AND i2.Song, i2.Instrument NOT IN (SELECT i3.Song, i3.Instrument
-FROM instruments i3
-WHERE Bandmate = 2)) i
+FROM instruments i
 GROUP BY i.Instrument
+HAVING COUNT(i.Instrument) >= ALL (SELECT COUNT(i.Instrument)
+FROM instruments i
+GROUP BY i.Instrument);
