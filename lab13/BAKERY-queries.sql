@@ -20,24 +20,79 @@ FROM receipts r
 GROUP BY saleDate
 HAVING saleDate BETWEEN "2007-10-08" AND "2007-10-15";
 
-3. Find the customers who never purchased a twist (‘Twist’) in October of 2007. Report their first and last names in alphabetical order by last name.
+-- 3
 
-SELECT DISTINCT FirstName, DISTINCT LastName
-FROM
-WHERE saleDate BETWEEN "2007-10-01" AND "2007-10-31" AND Food = "Twist"
-    AND NOT EXISTS(SELECT * FROM goods g
-                    WHERE )
+SELECT FirstName, LastName
+FROM customers c
+WHERE NOT EXISTS(
+    SELECT 'x'
+    FROM receipts r JOIN items i ON r.RNumber = i.Receipt
+        JOIN goods g ON i.Item = g.GId
+    WHERE MONTHNAME(saleDate) = "October" AND YEAR(saleDate) = 2007
+        AND Food = "Twist" AND c.CId = r.Customer)
 ORDER BY LastName;
 
-4. For every type of Cake report the customer(s) who purchased it the largest number of times during the month of October 2007. Report the name of the pastry (flavor, food type), the name of the customer (first, last), and the number of purchases made. Sort the output in descending order on the number of purchases, then in alphabetical order by last name of the customer.
-SELECT g.Flavor, g.Food, c.FirstName, c.LastName, COUNT(*) Purchases
-FROM
-WHERE Food = "Cake"
-GROUP BY Food, c.FirstName, c.LastName
-ORDER BY Purchases DESC, LastName;
 
-5. Output the names of all customers who did not make a purchase between October 5 and October 11 (inclusive) of 2007. Output first and last names in alphabetical order by last name.
-6. Output the names of all customers who made multiple purchases (more than one receipt) on the latest day in October on which they made a purchase. Report names (first, last) of the customers and the earliest day in October on which they made a purchase, sorted in chronological order.
-7. Find out if the sales of ‘Chocolate’-flavored items (in terms of revenue) or the sales of ‘Croissants’ (of all flavors) were higher in October of 2007. Output the word ‘Chocolate’, if the sales of ‘Chocolate’-flavored items had higher revenue, or the word ‘Croissant’ if the sales of ‘Croissants’ had higher revenue.
-    Note: This can be done in a number of ways. One way involves the CASE...WHEN clause inside
-    the SELECT clause, while another uses SQL’s IF(<expr1>,<expr2>,<expr3>) operator which is similar to C’s ?: operator. But there are ways of building the output without the use of any “exotic” features.
+-- 4
+
+SELECT a.Flavor, a.Food, a.FirstName, a.LastName, a.Purchases
+FROM
+    (SELECT  Flavor, Food, FirstName, LastName, count(*) Purchases
+    FROM receipts r JOIN items i ON r.RNumber = i.Receipt
+        JOIN goods g ON g.GId = i.Item
+        JOIN customers c ON r.Customer = c.CId
+    WHERE Food = "cake"
+        AND MONTHNAME(saleDate) = "October" AND YEAR(saleDate) = 2007
+    GROUP BY Flavor, Food, c.FirstName, c.LastName) a
+    LEFT JOIN
+    (SELECT  Flavor, Food, FirstName, LastName, count(*) Purchases
+    FROM receipts r JOIN items i ON r.RNumber = i.Receipt
+        JOIN goods g ON g.GId = i.Item
+        JOIN customers c ON r.Customer = c.CId
+    WHERE Food = "cake"
+        AND MONTHNAME(saleDate) = "October" AND YEAR(saleDate) = 2007
+    GROUP BY Flavor, Food, c.FirstName, c.LastName) b
+    ON a.Flavor = b.Flavor AND a.Purchases < b.Purchases
+WHERE b.Food IS NULL
+ORDER BY a.Purchases DESC, a.LastName;
+
+-- 5
+
+SELECT FirstName, LastName
+FROM customers c
+WHERE c.CId NOT IN(SELECT DISTINCT r.Customer
+                    FROM receipts r JOIN items i ON r.RNumber = i.Receipt
+                    JOIN goods g ON i.Item = g.GId
+                    WHERE saleDate BETWEEN "2007-10-05" AND "2007-10-11")
+ORDER BY LastName;
+
+-- 6
+
+SELECT FirstName, LastName, FirstPurchase
+FROM
+    (SELECT saleDate, Customer, COUNT(RNumber) Transactions
+    FROM receipts r
+    GROUP BY Customer, saleDate
+    HAVING Transactions > 1) a
+    JOIN
+    (SELECT Customer, MAX(saleDate) LastPurchase, MIN(saleDate) FirstPurchase
+    FROM receipts r
+    GROUP BY Customer) b
+    ON a.saleDate = b.LastPurchase AND a.Customer = b.Customer
+    JOIN customers c ON a.Customer = c.CId
+ORDER BY FirstPurchase;
+
+-- 7
+
+SELECT IF(Chocolate > Croissants, "Chocolate", "Croissants") HighestRevenue
+FROM
+    (SELECT SUM(Price) Chocolate
+    FROM receipts r JOIN items i ON r.RNumber = i.Receipt
+        JOIN goods g ON i.Item = g.GId
+    WHERE Flavor = "Chocolate"
+        AND MONTHNAME(saleDate) = "October" AND YEAR(saleDate) = 2007) a,
+    (SELECT SUM(Price) Croissants
+    FROM receipts r JOIN items i ON r.RNumber = i.Receipt
+        JOIN goods g ON i.Item = g.GId
+    WHERE Food = "Croissant"
+        AND MONTHNAME(saleDate) = "October" AND YEAR(saleDate) = 2007) b;

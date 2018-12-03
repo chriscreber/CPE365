@@ -29,24 +29,6 @@ LIMIT 1;
 
 -- 4
 
--- SELECT Grade, LastName
--- FROM list
--- GROUP BY Grade, LastName
--- HAVING LastName LIKE 'A%' OR LastName LIKE 'B%' OR LastName LIKE 'C%';
---
---
--- SELECT Grade
--- FROM list
--- WHERE LastName LIKE 'A%' OR LastName LIKE 'B%' OR LastName LIKE 'C%';
---
--- SELECT MAX(Total)
--- FROM (
---     SELECT COUNT(*) AS Total
---     FROM list
---     GROUP BY Grade
---     HAVING LastName LIKE 'A%' OR LastName LIKE 'B%' OR LastName LIKE 'C%') AS Results;
-
-
 SELECT Grade, COUNT(*) Count
 FROM (
     SELECT Grade
@@ -71,15 +53,14 @@ ORDER BY Classroom ASC;
 
 -- 6
 
-SELECT DISTINCT a.Classroom, b.Classroom, a.Students
+SELECT a.Classroom, b.Classroom, a.Students
 FROM
     (SELECT Classroom, COUNT(*) Students
     FROM list
     GROUP BY Classroom) a
-JOIN
+    JOIN
     (SELECT Classroom, COUNT(*) Students
     FROM list
     GROUP BY Classroom) b
-ON a.Students = b.Students AND a.Classroom != b.Classroom
-    AND a.Classroom < b.Classroom
+    ON a.Students = b.Students AND a.Classroom < b.Classroom
 ORDER BY Students;
